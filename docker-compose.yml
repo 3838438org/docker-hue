@@ -4,14 +4,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: parrotstream/hue:4.0.0
+    image: parrotstream/hue:3.9.0-cdh5.12.0
     networks:
     - parrot
     external_links:
     - hive
+    - hbase
+    - impala
     - hadoop
     - zookeeper
     - postgres
+    - kudu
     environment:
       PGPASSWORD: postgres
     ports:
