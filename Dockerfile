@@ -10,7 +10,6 @@ RUN yum install -y hue-beeswax hue-hbase hue-impala hue-pig hue-plugins hue-rdbm
 RUN yum clean all
 
 COPY etc/ /etc/
-RUN rm /etc/hue/conf.dist
 
 ADD bin/*.sh /
 RUN chmod +x /*.sh
