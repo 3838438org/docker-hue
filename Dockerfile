@@ -17,7 +17,6 @@ COPY etc/ /etc/
 
 ADD bin/*.sh /
 RUN chmod +x /*.sh
-RUN rm /etc/hue/conf/hue.ini
 
 EXPOSE 8000
 
