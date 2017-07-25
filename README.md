@@ -4,9 +4,9 @@ ___
 ### Description
 ___
 
-This image runs the official [*Cloudera Hue*](http://gethue.com/) on a Centos Linux distribution. The image is based on the [***mcapitanio/centos-java***](https://hub.docker.com/r/parrotstream/centos-openjdk). In order to run a fully functional Hue application you need to start all other servervice (ZooKeeper, Hadoop, Hive, Impala, Solr, Oozie, Sqoop, etc.).
+This image runs the official [*Cloudera Hue*](http://gethue.com/) on a Centos Linux distribution and the [*Apache Livy Server*](https://github.com/cloudera/livy). The image is based on the [**parrotstream/centos-openjdk*](https://hub.docker.com/r/parrotstream/centos-openjdk). In order to run a fully functional Hue application you need to start all other servervice (ZooKeeper, Hadoop, Hive, Impala, Solr, Oozie, Sqoop, etc.).
 
-The *latest* tag of this image is build with the [latest stable](http://gethue.com/category/release/) release of Cloudera Hue on Centos 7.
+The *latest* tag of this image is build with the [latest stable](http://gethue.com/category/release/) release of Cloudera Hue on Centos.
 
 You can pull it with:
 
@@ -21,6 +21,7 @@ You can also find other images based on different Cloudera Hue releases, using a
 For example, if you want Apache Hue release 3.11.0 you can pull the image with:
 
     docker pull parrotstream/hue:3.11.0
+
 
 Run with Docker Compose:
 
