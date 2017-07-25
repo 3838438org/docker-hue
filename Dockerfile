@@ -4,8 +4,6 @@ MAINTAINER Matteo Capitanio <matteo.capitanio@gmail.com>
 
 USER root
 
-ENV LIVY_SERVER_VER 0.3.0
-
 ADD cloudera-cdh5.repo /etc/yum.repos.d/
 RUN rpm --import https://archive.cloudera.com/cdh5/redhat/5/x86_64/cdh/RPM-GPG-KEY-cloudera
 RUN yum install -y gcc gcc-c++ libxml2-devel libxslt-devel cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-plain python-devel python-simplejson epel-release ant
@@ -14,10 +12,6 @@ RUN yum install -y python-pip
 RUN pip install --upgrade pip; \
     pip install setuptools psycopg2
 RUN yum clean all
-
-RUN git clone -b v$LIVY_SERVER_VER https://github.com/cloudera/livy.git /tmp/livy
-RUN cd /tmp/livy; \
-    mvn -DskipTests package
 
 COPY etc/ /etc/
 
