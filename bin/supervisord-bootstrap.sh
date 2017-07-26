@@ -13,7 +13,7 @@ psql -h postgres -U postgres -c "CREATE DATABASE hue;"
 hue syncdb --noinput
 hue migrate --noinput
 
-#supervisorctl start hue
+supervisorctl start hue
 
 echo -e "\n\n--------------------------------------------------------------------------------"
 echo -e "You can now access to the following Cloudera Hue Web UIs:\n"
